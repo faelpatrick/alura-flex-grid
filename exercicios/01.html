@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        border: none;
+      }
+      .container {
+        display: grid;
+        grid-template-areas: "header header" "main aside" "footer aside";
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 10vh 70vh 20vh;
+      }
+      header {
+        grid-area: header;
+        background-color: #1d1d1d;
+        color: red;
+      }
+      main {
+        grid-area: main;
+        background-color: blanchedalmond;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "profile name" "engrenagens engrenagens";
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+
+      .main__profile {
+        grid-area: profile;
+      }
+      .main__name {
+        grid-area: name;
+      }
+      .main__engrenagens {
+        display: grid;
+        grid-area: engrenagens;
+
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .main__icon {
+        width: 160px;
+      }
+
+      aside {
+        grid-area: aside;
+        background-color: gray;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <main>
+        <div class="main__profile"><img src="https://rafaelpatrick.com.br/wp-content/uploads/2021/09/cropped-meuprofile.jpg" style="width: 200px" alt="" /></div>
+        <div class="main__name"><p>Rafael Patrick de Souza</p></div>
+        <div class="main__engrenagens">
+          <img src="https://svgsilh.com/svg/1615049.svg" alt="" class="main__icon" />
+          <img src="https://svgsilh.com/svg/1615049.svg" alt="" class="main__icon" />
+          <img src="https://svgsilh.com/svg/1615049.svg" alt="" class="main__icon" />
+        </div>
+      </main>
+      <aside>Aside</aside>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
